@@ -1,14 +1,15 @@
 import useSpeechRecognition from "../hooks/useSpeechRecognition";
 
 const VoiceInput = () => {
-  const { transcript, listening, start, stop } = useSpeechRecognition();
+  const { transcript, isListening, error, startListening, stopListening } =
+    useSpeechRecognition();
 
   return (
     <div>
-      <button onClick={listening ? stop : start}>
-        {listening ? "Stop" : "Start"} Listening
+      <button onClick={isListening ? stopListening : startListening}>
+        {isListening ? "Stop" : "Start"} Listening
       </button>
-      {console.log(listening)}
+      {error && <p className="text-red-500">{error}</p>}
       <p>Transcript: {transcript}</p>
     </div>
   );
