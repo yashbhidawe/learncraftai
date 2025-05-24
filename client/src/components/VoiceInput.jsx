@@ -44,11 +44,15 @@ const VoiceInput = () => {
       <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl backdrop-blur-sm border border-gray-700/50">
         <div className="p-6 border-b border-gray-700/50">
           <div className="flex items-center justify-center space-x-3">
-            <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              LearnCraftAI
-            </h2>
-            <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+            <div className="flex flex-col">
+              <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 text-center">
+                LearnCraftAI
+              </h2>
+              <p className="text-lg font-thin text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Write any tech below which you would like a detailed roadmap
+                on..!
+              </p>
+            </div>{" "}
           </div>
         </div>
 
@@ -80,7 +84,7 @@ const VoiceInput = () => {
             <div className="flex space-x-4">
               <div className="flex-grow relative">
                 <textarea
-                  placeholder="Type your message here... (Press Enter to send)"
+                  placeholder="Eg. 30 days roadmap for react..."
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={handleKeyPress}
