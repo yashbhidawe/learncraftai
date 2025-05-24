@@ -1,10 +1,10 @@
 import React from "react";
-import Dictaphone from "./components/Dictaphone";
+import VoiceInput from "./components/VoiceInput";
 
 const App = () => {
   return (
     <div className="text-5xl">
-      <Dictaphone />
+      <VoiceInput />
     </div>
   );
 };

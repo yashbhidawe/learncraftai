@@ -13,9 +13,6 @@
     "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-hook-speech-to-text": "^0.8.0",
-    "react-speech-kit": "^3.0.1",
-    "react-speech-recognition": "^4.0.1",
     "tailwindcss": "^4.1.7"
   },
   "devDependencies": {
