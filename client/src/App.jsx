@@ -3,7 +3,7 @@ import VoiceInput from "./components/VoiceInput";
 
 const App = () => {
   return (
-    <div className="text-5xl">
+    <div>
       <VoiceInput />
     </div>
   );

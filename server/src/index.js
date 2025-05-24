@@ -1,12 +1,15 @@
 const express = require("express");
+require("dotenv").config();
 const cookieParser = require("cookie-parser");
-
-const connectDB = require("../config/db");
+const cors = require("cors");
+const connectDB = require("./config/db");
+const responseRouter = require("./routes/response");
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-
+app.use(cors());
+app.use("/", responseRouter);
 const PORT = process.env.PORT || 3000;
 connectDB()
   .then(() => {
